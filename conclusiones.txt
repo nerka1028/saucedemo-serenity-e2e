@@ -1,0 +1,12 @@
+
+Conclusiones y Hallazgos del ejercicio:
+
+1. El proyecto fue ejecutado utilizando Serenity con Screenplay y Cucumber para automatización de pruebas E2E. Lo que permite una estructura clara y reutilizable de pasos.
+2. Durante la ejecución de las pruebas se detectó una ventana modal de alerta de Google Password Manager producto de un data-leak que interrumpía el flujo esperado. A pesar de múltiples intentos por desactivar el password manager mediante ChromeOptions y configuración de perfil, el pop-up persiste. Tampoco dio resultados positivos la ejecución headless.
+3. Es importante mantener sincronizadas las versiones de navegador, driver y dependencias para evitar errores como TimeoutException o ElementNotFound.
+4. De todas formas es posible ejecutar el test completo si se cierra manualmente el pop-up durante la ejecución en el navegador. Los resultados de la ejecución completa se encuentran en el documento adjunto.
+
+Recomendaciones:
+- Utilizar entornos limpios o contenedores para evitar interferencias del sistema.
+- Evaluar usar perfiles de usuario en Chrome configurados manualmente para evitar popups.
+- Incluir validaciones más robustas para elementos esperados en el flujo de compra.
