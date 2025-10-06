@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.0.12'
+}
+
+group = 'com.saucedemo'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+def serenityVersion = '3.9.8'
+
+dependencies {
+    // Serenity + Screenplay
+    testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+
+    //JUnit 4 for Cucumber with Serenity
+    testImplementation 'junit:junit:4.13.2'
+
+    // Selenium
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.20.0'
+
+    // JSON and CSV Read
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.1'
+    implementation 'org.apache.commons:commons-csv:1.10.0'
+
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    runtimeOnly 'org.slf4j:slf4j-simple:2.0.9'
+}
+
+test {
+    useJUnit()
+}
+
+serenity {
+    testRoot = "com.saucedemo.runners"
+}
+
+tasks.withType(Test) {
+    systemProperty "webdriver.driver", "chrome"
+    systemProperty "webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe"
+    systemProperty "chrome.options", " --disable-gpu --window-size=1920,1080 --disable-blink-features=AutomationControlled --disable-extensions --disable-password-manager-reauthentication"
+}
+
