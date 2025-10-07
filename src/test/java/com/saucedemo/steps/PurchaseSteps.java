@@ -2,20 +2,25 @@ package com.saucedemo.steps;
 
 import com.saucedemo.questions.OrderConfirmation;
 import com.saucedemo.tasks.*;
+import com.saucedemo.ui.ProductsPage;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import org.openqa.selenium.WebDriver;
 import net.thucydides.core.annotations.Managed;
-import com.saucedemo.utils.UserLoader;
 import org.openqa.selenium.chrome.ChromeDriver;
 import com.saucedemo.config.ChromeCustomOptions;
+import net.serenitybdd.screenplay.targets.Target;
+import java.util.ArrayList;
+import java.util.List;
+
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class PurchaseSteps {
+
     @Managed(driver = "chrome")
     WebDriver browser;
 
@@ -27,18 +32,20 @@ public class PurchaseSteps {
         user.can(BrowseTheWeb.with(driver));
     }
 
-    @Given("the user logs in with valid credentials")
-    public void login() {
-        user.attemptsTo(Login.withCredentials(
-                UserLoader.getUsername("standard_user"),
-                UserLoader.getPassword("standard_user")
-        ));
+    @Given("the user logs in with username {string} and password {string}")
+    public void loginWithParams(String username, String password) {
+        user.attemptsTo(Login.withCredentials(username, password));
     }
 
-    @When("the user adds two products to the cart")
-    public void addProducts() {
-        user.attemptsTo(AddProducts.toCart());
+    @When("the user adds {int} products to the cart")
+    public void addProducts(int productCount) {
+        List<Target> products = new ArrayList<>();
+        for (int i = 1; i <= productCount; i++) {
+            products.add(ProductsPage.productByIndex(i));
+        }
+        user.attemptsTo(AddProducts.toCart(products));
     }
+
 
     @And("completes the checkout process")
     public void completeCheckout() {

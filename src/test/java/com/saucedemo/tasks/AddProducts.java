@@ -1,23 +1,35 @@
 package com.saucedemo.tasks;
 
-import com.saucedemo.ui.ProductsPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Scroll;
+import net.serenitybdd.screenplay.targets.Target;
+
+import java.util.List;
+
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class AddProducts implements Task {
 
-    public static AddProducts toCart() {
-        return instrumented(AddProducts.class);
+    private final List<Target> products;
+
+    public AddProducts(List<Target> products) {
+        this.products = products;
+    }
+
+    public static AddProducts toCart(List<Target> products) {
+        return instrumented(AddProducts.class, products);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                Click.on(ProductsPage.ADD_TO_CART_FIRST),
-                Click.on(ProductsPage.ADD_TO_CART_SECOND),
-                Click.on(ProductsPage.CART_ICON)
-        );
+        for (Target product : products) {
+            actor.attemptsTo(
+                    Scroll.to(product),
+                    Click.on(product)
+            );
+        }
+        actor.attemptsTo(Click.on(com.saucedemo.ui.ProductsPage.CART_ICON));
     }
 }

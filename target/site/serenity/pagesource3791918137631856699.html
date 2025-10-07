@@ -54,32 +54,148 @@
         &lt;/div&gt;<br/>
        &lt;/div&gt;<br/>
        &lt;div id="shopping_cart_container" class="shopping_cart_container"&gt;<br/>
-        &lt;a class="shopping_cart_link" data-test="shopping-cart-link"&gt;&lt;span class="shopping_cart_badge" data-test="shopping-cart-badge"&gt;2&lt;/span&gt;&lt;/a&gt;<br/>
+        &lt;a class="shopping_cart_link" data-test="shopping-cart-link"&gt;&lt;/a&gt;<br/>
        &lt;/div&gt;<br/>
       &lt;/div&gt;<br/>
       &lt;div class="header_secondary_container" data-test="secondary-header"&gt;<br/>
-       &lt;span class="title" data-test="title"&gt;Checkout: Your Information&lt;/span&gt;<br/>
+       &lt;span class="title" data-test="title"&gt;Products&lt;/span&gt;<br/>
+       &lt;div class="right_component"&gt;<br/>
+        &lt;span class="select_container"&gt;&lt;span class="active_option" data-test="active-option"&gt;Name (A to Z)&lt;/span&gt;&lt;select class="product_sort_container" data-test="product-sort-container"&gt;&lt;option value="az"&gt;Name (A to Z)&lt;/option&gt;&lt;option value="za"&gt;Name (Z to A)&lt;/option&gt;&lt;option value="lohi"&gt;Price (low to high)&lt;/option&gt;&lt;option value="hilo"&gt;Price (high to low)&lt;/option&gt;&lt;/select&gt;&lt;/span&gt;<br/>
+       &lt;/div&gt;<br/>
       &lt;/div&gt;<br/>
      &lt;/div&gt;<br/>
-     &lt;div id="checkout_info_container" class="checkout_info_container" data-test="checkout-info-container"&gt;<br/>
-      &lt;div class="checkout_info_wrapper"&gt;<br/>
-       &lt;form&gt;<br/>
-        &lt;div class="checkout_info"&gt;<br/>
-         &lt;div class="form_group"&gt;<br/>
-          &lt;input class="input_error form_input" placeholder="First Name" type="text" data-test="firstName" id="first-name" name="firstName" autocorrect="off" autocapitalize="none" value="Dummy" wfd-id="id3"&gt;<br/>
+     &lt;div id="inventory_container"&gt;<br/>
+      &lt;div&gt;<br/>
+       &lt;div id="inventory_container" class="inventory_container" data-test="inventory-container"&gt;<br/>
+        &lt;div class="inventory_list" data-test="inventory-list"&gt;<br/>
+         &lt;div class="inventory_item" data-test="inventory-item"&gt;<br/>
+          &lt;div class="inventory_item_img"&gt;<br/>
+           &lt;a href="#" id="item_4_img_link" data-test="item-4-img-link"&gt;&lt;img alt="Sauce Labs Backpack" class="inventory_item_img" src="/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg" data-test="inventory-item-sauce-labs-backpack-img"&gt;&lt;/a&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="inventory_item_description" data-test="inventory-item-description"&gt;<br/>
+           &lt;div class="inventory_item_label"&gt;<br/>
+            &lt;a href="#" id="item_4_title_link" data-test="item-4-title-link"&gt;<br/>
+             &lt;div class="inventory_item_name " data-test="inventory-item-name"&gt;<br/>
+              Sauce Labs Backpack<br/>
+             &lt;/div&gt;&lt;/a&gt;<br/>
+            &lt;div class="inventory_item_desc" data-test="inventory-item-desc"&gt;<br/>
+             carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="pricebar"&gt;<br/>
+            &lt;div class="inventory_item_price" data-test="inventory-item-price"&gt;<br/>
+             $29.99<br/>
+            &lt;/div&gt;&lt;button class="btn btn_primary btn_small btn_inventory " data-test="add-to-cart-sauce-labs-backpack" id="add-to-cart-sauce-labs-backpack" name="add-to-cart-sauce-labs-backpack"&gt;Add to cart&lt;/button&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
          &lt;/div&gt;<br/>
-         &lt;div class="form_group"&gt;<br/>
-          &lt;input class="input_error form_input" placeholder="Last Name" type="text" data-test="lastName" id="last-name" name="lastName" autocorrect="off" autocapitalize="none" value="" wfd-id="id4"&gt;<br/>
+         &lt;div class="inventory_item" data-test="inventory-item"&gt;<br/>
+          &lt;div class="inventory_item_img"&gt;<br/>
+           &lt;a href="#" id="item_0_img_link" data-test="item-0-img-link"&gt;&lt;img alt="Sauce Labs Bike Light" class="inventory_item_img" src="/static/media/bike-light-1200x1500.37c843b0.jpg" data-test="inventory-item-sauce-labs-bike-light-img"&gt;&lt;/a&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="inventory_item_description" data-test="inventory-item-description"&gt;<br/>
+           &lt;div class="inventory_item_label"&gt;<br/>
+            &lt;a href="#" id="item_0_title_link" data-test="item-0-title-link"&gt;<br/>
+             &lt;div class="inventory_item_name " data-test="inventory-item-name"&gt;<br/>
+              Sauce Labs Bike Light<br/>
+             &lt;/div&gt;&lt;/a&gt;<br/>
+            &lt;div class="inventory_item_desc" data-test="inventory-item-desc"&gt;<br/>
+             A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="pricebar"&gt;<br/>
+            &lt;div class="inventory_item_price" data-test="inventory-item-price"&gt;<br/>
+             $9.99<br/>
+            &lt;/div&gt;&lt;button class="btn btn_primary btn_small btn_inventory " data-test="add-to-cart-sauce-labs-bike-light" id="add-to-cart-sauce-labs-bike-light" name="add-to-cart-sauce-labs-bike-light"&gt;Add to cart&lt;/button&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
          &lt;/div&gt;<br/>
-         &lt;div class="form_group"&gt;<br/>
-          &lt;input class="input_error form_input" placeholder="Zip/Postal Code" type="text" data-test="postalCode" id="postal-code" name="postalCode" autocorrect="off" autocapitalize="none" value="" wfd-id="id5"&gt;<br/>
+         &lt;div class="inventory_item" data-test="inventory-item"&gt;<br/>
+          &lt;div class="inventory_item_img"&gt;<br/>
+           &lt;a href="#" id="item_1_img_link" data-test="item-1-img-link"&gt;&lt;img alt="Sauce Labs Bolt T-Shirt" class="inventory_item_img" src="/static/media/bolt-shirt-1200x1500.c2599ac5.jpg" data-test="inventory-item-sauce-labs-bolt-t-shirt-img"&gt;&lt;/a&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="inventory_item_description" data-test="inventory-item-description"&gt;<br/>
+           &lt;div class="inventory_item_label"&gt;<br/>
+            &lt;a href="#" id="item_1_title_link" data-test="item-1-title-link"&gt;<br/>
+             &lt;div class="inventory_item_name " data-test="inventory-item-name"&gt;<br/>
+              Sauce Labs Bolt T-Shirt<br/>
+             &lt;/div&gt;&lt;/a&gt;<br/>
+            &lt;div class="inventory_item_desc" data-test="inventory-item-desc"&gt;<br/>
+             Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="pricebar"&gt;<br/>
+            &lt;div class="inventory_item_price" data-test="inventory-item-price"&gt;<br/>
+             $15.99<br/>
+            &lt;/div&gt;&lt;button class="btn btn_primary btn_small btn_inventory " data-test="add-to-cart-sauce-labs-bolt-t-shirt" id="add-to-cart-sauce-labs-bolt-t-shirt" name="add-to-cart-sauce-labs-bolt-t-shirt"&gt;Add to cart&lt;/button&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
          &lt;/div&gt;<br/>
-         &lt;div class="error-message-container"&gt;&lt;/div&gt;<br/>
+         &lt;div class="inventory_item" data-test="inventory-item"&gt;<br/>
+          &lt;div class="inventory_item_img"&gt;<br/>
+           &lt;a href="#" id="item_5_img_link" data-test="item-5-img-link"&gt;&lt;img alt="Sauce Labs Fleece Jacket" class="inventory_item_img" src="/static/media/sauce-pullover-1200x1500.51d7ffaf.jpg" data-test="inventory-item-sauce-labs-fleece-jacket-img"&gt;&lt;/a&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="inventory_item_description" data-test="inventory-item-description"&gt;<br/>
+           &lt;div class="inventory_item_label"&gt;<br/>
+            &lt;a href="#" id="item_5_title_link" data-test="item-5-title-link"&gt;<br/>
+             &lt;div class="inventory_item_name " data-test="inventory-item-name"&gt;<br/>
+              Sauce Labs Fleece Jacket<br/>
+             &lt;/div&gt;&lt;/a&gt;<br/>
+            &lt;div class="inventory_item_desc" data-test="inventory-item-desc"&gt;<br/>
+             It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="pricebar"&gt;<br/>
+            &lt;div class="inventory_item_price" data-test="inventory-item-price"&gt;<br/>
+             $49.99<br/>
+            &lt;/div&gt;&lt;button class="btn btn_primary btn_small btn_inventory " data-test="add-to-cart-sauce-labs-fleece-jacket" id="add-to-cart-sauce-labs-fleece-jacket" name="add-to-cart-sauce-labs-fleece-jacket"&gt;Add to cart&lt;/button&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="inventory_item" data-test="inventory-item"&gt;<br/>
+          &lt;div class="inventory_item_img"&gt;<br/>
+           &lt;a href="#" id="item_2_img_link" data-test="item-2-img-link"&gt;&lt;img alt="Sauce Labs Onesie" class="inventory_item_img" src="/static/media/red-onesie-1200x1500.2ec615b2.jpg" data-test="inventory-item-sauce-labs-onesie-img"&gt;&lt;/a&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="inventory_item_description" data-test="inventory-item-description"&gt;<br/>
+           &lt;div class="inventory_item_label"&gt;<br/>
+            &lt;a href="#" id="item_2_title_link" data-test="item-2-title-link"&gt;<br/>
+             &lt;div class="inventory_item_name " data-test="inventory-item-name"&gt;<br/>
+              Sauce Labs Onesie<br/>
+             &lt;/div&gt;&lt;/a&gt;<br/>
+            &lt;div class="inventory_item_desc" data-test="inventory-item-desc"&gt;<br/>
+             Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="pricebar"&gt;<br/>
+            &lt;div class="inventory_item_price" data-test="inventory-item-price"&gt;<br/>
+             $7.99<br/>
+            &lt;/div&gt;&lt;button class="btn btn_primary btn_small btn_inventory " data-test="add-to-cart-sauce-labs-onesie" id="add-to-cart-sauce-labs-onesie" name="add-to-cart-sauce-labs-onesie"&gt;Add to cart&lt;/button&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="inventory_item" data-test="inventory-item"&gt;<br/>
+          &lt;div class="inventory_item_img"&gt;<br/>
+           &lt;a href="#" id="item_3_img_link" data-test="item-3-img-link"&gt;&lt;img alt="Test.allTheThings() T-Shirt (Red)" class="inventory_item_img" src="/static/media/red-tatt-1200x1500.30dadef4.jpg" data-test="inventory-item-test.allthethings()-t-shirt-(red)-img"&gt;&lt;/a&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="inventory_item_description" data-test="inventory-item-description"&gt;<br/>
+           &lt;div class="inventory_item_label"&gt;<br/>
+            &lt;a href="#" id="item_3_title_link" data-test="item-3-title-link"&gt;<br/>
+             &lt;div class="inventory_item_name " data-test="inventory-item-name"&gt;<br/>
+              Test.allTheThings() T-Shirt (Red)<br/>
+             &lt;/div&gt;&lt;/a&gt;<br/>
+            &lt;div class="inventory_item_desc" data-test="inventory-item-desc"&gt;<br/>
+             This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="pricebar"&gt;<br/>
+            &lt;div class="inventory_item_price" data-test="inventory-item-price"&gt;<br/>
+             $15.99<br/>
+            &lt;/div&gt;&lt;button class="btn btn_primary btn_small btn_inventory " data-test="add-to-cart-test.allthethings()-t-shirt-(red)" id="add-to-cart-test.allthethings()-t-shirt-(red)" name="add-to-cart-test.allthethings()-t-shirt-(red)"&gt;Add to cart&lt;/button&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
         &lt;/div&gt;<br/>
-        &lt;div class="checkout_buttons"&gt;<br/>
-         &lt;button class="btn btn_secondary back btn_medium cart_cancel_link" data-test="cancel" id="cancel" name="cancel"&gt;&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LmRhNGE3ZTVlZiwgMjAyMi8xMS8yMi0xMzo1MDowNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjEgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzQ4Q0IxMkFBRUZDMTFFREIwRThFMzc3OTlDRTMyNUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzQ4Q0IxMkJBRUZDMTFFREIwRThFMzc3OTlDRTMyNUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNDhDQjEyOEFFRkMxMUVEQjBFOEUzNzc5OUNFMzI1QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNDhDQjEyOUFFRkMxMUVEQjBFOEUzNzc5OUNFMzI1QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgbFSzAAAAFGSURBVHjaYvz//z/DQAImhgEGow4gywHLD2zON8gPeN+9dk4/pQ5gJDURzty2or513awGGP/RnH2MdAsBdMurAlMbKY4DUAgQg2dsXV4vm+z4H4anb1nWQKxefHhALSfKAbS0nKADaG05XgfQw3KcDqCX5VgdQE/LQRilIELP50byWheSXYMmUrPo1ZBVuqAqrXABoyS8/fSBgXN90nl6lP/ryyc7GqtqH0ApCT99+ypArwqIj4v7A9a6ABj/DW3rZ9fTMgqkhMUfwHyPtSgGJTrkRAhKlLRMhMwNDQ0oLjRR0z3AyczGePjGOQcQ//D1sw5cLOwMJqo6B2kRHRgOoLcjsDqAno7A6QB6OQKvA+jhCIIOoLUjiHIALkeI8wp+1FVUP0GXJhm2ckI/z/89XZpkuBzRuWrWBKrWhqM9oxHpAIAAAwBV1hmIioz+GAAAAABJRU5ErkJggg==" class="back-image" alt="Go back"&gt;Cancel&lt;/button&gt;&lt;input type="submit" class="submit-button btn btn_primary cart_button btn_action" data-test="continue" id="continue" name="continue" value="Continue" wfd-id="id6"&gt;<br/>
-        &lt;/div&gt;<br/>
-       &lt;/form&gt;<br/>
+       &lt;/div&gt;<br/>
       &lt;/div&gt;<br/>
      &lt;/div&gt;<br/>
     &lt;/div&gt;<br/>
